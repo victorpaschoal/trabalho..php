@@ -48,7 +48,7 @@
            
            
         }
-
+        header('location:itens.php?codigo=12');
          
 
 

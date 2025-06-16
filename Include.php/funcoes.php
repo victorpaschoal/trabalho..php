@@ -75,6 +75,9 @@ function validar_codigo(){
             break;
             case 11: // cliente cadastrado com sucesso
             $msg = "<h3 class='alert alert-success' role='alert'>Tarefa excluida com sucesso</h3>";
+            break;
+            case 12: // cliente cadastrado com sucesso
+            $msg = "<h3 class='alert alert-success' role='alert'>Cliente editado com sucesso</h3>";
             break;               
         default:
             $msg = "";
