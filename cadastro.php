@@ -12,7 +12,7 @@ validar_codigo();
 </head>
 <body>
 
-
+    <!-- bootstrap junto com formularios -->
     <div class="container">
         <div>
             <fieldset>

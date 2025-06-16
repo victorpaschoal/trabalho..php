@@ -7,7 +7,7 @@
     <title>editar</title>
 </head>
 <body>
-    <?php require_once 'Include.php/funcoes.php';
+    <?php require_once 'Include.php/funcoes.php'; // icluind a pagina de funcao
     
     
      if (id_nao_recebido()){

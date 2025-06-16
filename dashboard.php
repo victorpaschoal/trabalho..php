@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="CSS/estilo.css">
 </head>
 <body>
-<?php include_once 'Include.php/funcoes.php';?>
+<?php include_once 'Include.php/funcoes.php';?> <!-- incluindo a pagina de funcao -->
 
     
-
+<!-- funcao -->
       <ul class="nav">
     <li class="nav-item">
       <a class="nav-link active" href="dashboard.php">Home</a>

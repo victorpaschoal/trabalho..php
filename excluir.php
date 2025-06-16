@@ -13,10 +13,10 @@
     $conn = conectar_banco();
 
     $id_usuario = $_SESSION['id'];
-
+    // query para cancelamento
     $sql = "DELETE FROM tarefa WHERE id = $id_tarefa 
             AND usuario_id = $id_usuario";
-
+    
     mysqli_query($conn, $sql);
 
     $linhas = mysqli_affected_rows($conn);

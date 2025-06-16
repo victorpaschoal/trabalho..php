@@ -1,5 +1,5 @@
-<?php require_once 'lock.php'; ?>
-<?php require_once 'Include.php/funcoes.php'; ?>
+<?php require_once 'lock.php'; ?> <!-- vendo se a sessao esta correta foi realizada -->
+<?php require_once 'Include.php/funcoes.php'; ?> <!-- pegando as funcoes -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -13,15 +13,15 @@
 
     <?php
 
-    validar_codigo();
+    validar_codigo(); // executando a funcao
 
-    require_once 'dashboard.php';
+    require_once 'dashboard.php'; // importando a navegacao
 
     // incluir arquivo de conexao
-    require_once 'Include.php/conexao.php';
+    require_once 'Include.php/conexao.php'; // conectando a pagina de conexao
 
     // estabelecer conexão com bd
-    $conn = conectar_banco();
+    $conn = conectar_banco(); 
 
     $id = $_SESSION['id'];
 
@@ -44,8 +44,7 @@
     }
 
     // Enquanto houver registros armazenados dentro de 'resultado'.
-    // (registro = linha da tabela = cliente)
-    // transforme o registro que está sendo acessado na iteração atual
+    
     // do laço em um arrayu associativo chamado 'cliente'
     echo "<h2>Tarefas Cadastrados</h2>";
 

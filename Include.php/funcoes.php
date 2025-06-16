@@ -1,30 +1,30 @@
 <?php
 
 function id_nao_recebido() {
-    return !isset($_GET['id']);
+    return !isset($_GET['id']); // ID 
 }
 
 function form_nao_enviado(){
-    return $_SERVER['REQUEST_METHOD'] !== 'POST';
+    return $_SERVER['REQUEST_METHOD'] !== 'POST'; // vendo metodos POST
 }
 
 function form_em_branco() {
-    return empty($_POST['login']) || empty($_POST['senha']);
+    return empty($_POST['login']) || empty($_POST['senha']); // vendo metodos POST
 }
 
 function form_em_branco_cadastro(){
-    return empty($_POST['login_cadastro']) || empty($_POST['email_cadastro']) || empty($_POST['senha_cadastro']);
+    return empty($_POST['login_cadastro']) || empty($_POST['email_cadastro']) || empty($_POST['senha_cadastro']); // vendo metodos POST
 }
 
 function form_em_branco_tarefa(){
-    return empty($_POST['cadastrar_tarefa']) || empty($_POST['cadastrar_descricao']);
+    return empty($_POST['cadastrar_tarefa']) || empty($_POST['cadastrar_descricao']); // vendo metodos POST
 }
 
 function editar_em_branco(){
-    return empty($_POST['titulo']) || empty($_POST['descricao']);
+    return empty($_POST['titulo']) || empty($_POST['descricao']); // vendo metodos POST
 }
 
-function validar_codigo(){
+function validar_codigo(){ // validando os codigos passados
      if (!isset($_GET['codigo'])) {
         return;
     }
@@ -58,25 +58,25 @@ function validar_codigo(){
         case 5: // foi cadastrado o cliente
             $msg = "<h3 class='alert alert-success' role='alert'>Cadastro feito com sucesso</h3>";
             break;
-         case 6: // cliente cadastrado com sucesso
+         case 6: // tarefa com sucesso
             $msg = "<h3 class='alert alert-success' role='alert'>Tarefa cadastrada com sucesso</h3>";
             break;
-         case 7: // cliente cadastrado com sucesso
+         case 7: // form de edicao nao informado
             $msg = "<h3 class='alert alert-danger' role='alert'>Formulario de edicao nao enviado</h3>";
             break;
-         case 8: // cliente cadastrado com sucesso
+         case 8: // erro na preparacao consulta com banco de dados
             $msg = "<h3 class='alert alert-danger' role='alert'>Erro na preparação da consulta</h3>";
             break;
-          case 9: // cliente cadastrado com sucesso
+          case 9: // nenhum dado alterado do banco
             $msg = "<h3 class='alert alert-warning' role='alert'>Nenhum dado foi alterado</h3>";
             break;
-           case 10: // cliente cadastrado com sucesso
+           case 10: // Erro ao editar cliente
             $msg = "<h3 class='alert alert-danger' role='alert'>Erro ao editar cliente especificado. Verifique ID do cliente</h3>";
             break;
-            case 11: // cliente cadastrado com sucesso
+            case 11: // tarefa excluida com sucesso
             $msg = "<h3 class='alert  alert-success' role='alert'>Tarefa excluida com sucesso</h3>";
             break;
-            case 12: // cliente cadastrado com sucesso
+            case 12: // cliente editado com sucesso
             $msg = "<h3 class='alert alert-success' role='alert'>Cliente editado com sucesso</h3>";
             break;               
         default:

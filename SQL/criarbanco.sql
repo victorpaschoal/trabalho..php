@@ -1,8 +1,8 @@
--- Criação do banco de dados (opcional)
+
 CREATE DATABASE IF NOT EXISTS tarefas_db;
 USE tarefas_db;
 
--- Tabela de usuários
+-- Tabela de usuário
 CREATE TABLE IF NOT EXISTS usuario (
     id INT AUTO_INCREMENT PRIMARY KEY,
     loginn VARCHAR(50) NOT NULL UNIQUE,
@@ -23,6 +23,6 @@ CREATE TABLE IF NOT EXISTS tb_tarefas (
 INSERT INTO usuario (loginn, senha, email) VALUES
 ('mepassa.porfavor', 'mepassa', 'jason.mepassa@porfavor.amem');
 
--- Inserindo uma tarefa de exemplo para o usuário recém-criado
+
 INSERT INTO tb_tarefas (titulo, descricao, usuario_id) VALUES
 ('Dar nota maxima para aluno Victor Oliva', 'Ele muito esforcado, que cara legal', 1);
