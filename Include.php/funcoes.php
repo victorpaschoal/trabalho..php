@@ -74,7 +74,7 @@ function validar_codigo(){
             $msg = "<h3 class='alert alert-danger' role='alert'>Erro ao editar cliente especificado. Verifique ID do cliente</h3>";
             break;
             case 11: // cliente cadastrado com sucesso
-            $msg = "<h3 class='alert alert-success' role='alert'>Tarefa excluida com sucesso</h3>";
+            $msg = "<h3 class='alert  alert-success' role='alert'>Tarefa excluida com sucesso</h3>";
             break;
             case 12: // cliente cadastrado com sucesso
             $msg = "<h3 class='alert alert-success' role='alert'>Cliente editado com sucesso</h3>";
